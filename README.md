@@ -7,13 +7,21 @@ Backend básico con rocket implementado en rust.
 
 ## Requisitos
   * Rust 1.21 (Nightly)
-
+  * Cargo
 
   ```bash
-  $ rustup install noghtly
+  $ rustup install nightly
+  $ rustup run nightly rustc --version
+  $ rustup default nightly
+  $ cargo new hello-rocket --bin
+  $ cd hello-rocket
   ```
 
 ## Ejecutar
+  ```bash
+  $ git clone <repo>
+  $ cargo run
+  ```
 
 ## Rutas
 
