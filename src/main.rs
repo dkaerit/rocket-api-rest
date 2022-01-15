@@ -1,11 +1,23 @@
-#![feature(proc_macro_hygiene, decl_macro)]
 #[macro_use] extern crate rocket;
 
-#[get("/")]
-fn index() -> &'static str {
-    "Hello, world!"
-}
+use rocket::{ Config };
 
-fn main() {
-    rocket::ignite().mount("/", routes![index]).launch();
+mod models; use self::models::user::{ User::* };
+
+/**
+ * @title ---- START SERVICE ----
+ * @brief Función de incio del servidor
+ * @param _ parmetro de tipado débil
+ */
+
+#[launch]
+fn rocket() -> _ {
+    // datos del servicio web
+    let config = Config::figment()
+        .merge(("address", "127.0.0.1"))
+        .merge(("port", 8081));
+
+    // levantando el servicio web: rocket::[build()|custom()]
+    rocket::custom(config)
+        .mount("/users", routes![getUser, setUser])
 }
