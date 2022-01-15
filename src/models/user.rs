@@ -1,4 +1,7 @@
 /**
+ * ----------------------------------------------------------
+ * ESQUEMA DE USUARIOS
+ * ----------------------------------------------------------
  * @brief Esquema del dato User que se espera manjerar
  * @trait id identificador
  * @trait username Nombre del usuario
@@ -11,6 +14,9 @@ struct UserSchema {
 }
 
 /**
+ * ----------------------------------------------------------
+ * DEFINICIONES DE LOS HANDLERS
+ * ----------------------------------------------------------
  * @brief Conjunto de funciones correspondientes a User
  */
 

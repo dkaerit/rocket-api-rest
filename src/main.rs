@@ -1,11 +1,12 @@
 #[macro_use] extern crate rocket;
 
 use rocket::{ Config };
-
 mod models; use self::models::user::{ User::* };
 
 /**
- * @title ---- START SERVICE ----
+ * ----------------------------------------------------------
+ * PUESTA EN MARCHA DEL SERVICIO
+ * ----------------------------------------------------------
  * @brief Función de incio del servidor
  * @param _ parmetro de tipado débil
  */
